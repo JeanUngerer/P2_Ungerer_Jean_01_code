@@ -9,7 +9,7 @@ import com.hemebiotech.analytics.map.MappingIllness;
 
 /**
 * IllnessWriter uses MappingIllness and a target file
-* to write the key/value pairs in line
+* to write the key/value pairs in line in the text file
 * @Param mapped <MappingIllness >
 * @Param filePath <String>
 */
@@ -30,7 +30,7 @@ public class IllnessWriter implements IllnessWriterInterface {
 	}
 	
 	/**
-	* Method writes all pairs in mapped.Map in the text file in the order of the map
+	* Method writeInFile() : writes all pairs in mapped.Map in the text file in the order of the map
 	* @Return <Boolean> true if successful, false otherwise
 	*/	
 	public boolean writeInFile()

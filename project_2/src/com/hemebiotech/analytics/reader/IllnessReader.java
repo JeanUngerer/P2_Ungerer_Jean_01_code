@@ -6,16 +6,31 @@ import java.io.IOException;
 
 import com.hemebiotech.analytics.map.MappingIllness;
 
+/**
+* IllnessReader uses MappingIllness and a source file
+* to write the key/value pairs in a map
+* @Param mapped <MappingIllness >
+* @Param filePath <String>
+*/
 public class IllnessReader implements IllnessReaderInterface {
 	private String filePath;
 	private MappingIllness mapper;
 	
+	/**
+	* Constructor for class IllnessReader
+	* @param filePath  <litteral path from workspace root to the target file>
+	* @param mapped <class containing a Map <String, Integer> containing data to be written>
+	*/
 	public IllnessReader (String filePath, MappingIllness mapper)
 	{
 		this.filePath = filePath;
 		this.mapper = mapper;
 	}
 	
+	/**
+	* Method readSymptoms () : reads all lines in the text file and writes it in the the map
+	* @Return <Boolean> true if successful, false otherwise
+	*/	
 	public boolean readSymptoms ()
 	{
 		if (this.filePath == null) 
@@ -34,6 +49,7 @@ public class IllnessReader implements IllnessReaderInterface {
 			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
+			return false;
 		}
 		return true;
 		
