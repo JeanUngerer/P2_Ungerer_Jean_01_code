@@ -1,6 +1,6 @@
 <config>
 	<files id = "1">
 		<inputFile>src/symptoms.txt</inputFile>
-		<outputFile>symptomsOut.txt</outputFile>
+		<outputFile>result.out</outputFile>
 	</files>
 </config>
